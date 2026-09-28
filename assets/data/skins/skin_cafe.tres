@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkinData" format=3 uid="uid://cw5itam5m6kpf"]
+
+[ext_resource type="Texture2D" uid="uid://d2ioxdyud1of3" path="res://assets/sprites/background/Autumn_Bg.png" id="1_7f8d7"]
+[ext_resource type="Script" uid="uid://cy7dsomjqck4d" path="res://scripts/SkinData.gd" id="1_mx338"]
+[ext_resource type="Texture2D" uid="uid://yp0capoj4hic" path="res://assets/sprites/background/Autumn_Shelf.png" id="2_gxhum"]
+[ext_resource type="Texture2D" uid="uid://y6ch37mc4e58" path="res://assets/sprites/preview/Preview5.png" id="4_usap0"]
+
+[resource]
+script = ExtResource("1_mx338")
+skin_name = "Autumn Day"
+key_cost = 50
+far_texture = ExtResource("1_7f8d7")
+mid_texture = ExtResource("2_gxhum")
+preview_texture = ExtResource("4_usap0")
+metadata/_custom_type_script = "uid://cy7dsomjqck4d"

@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://lbnu877i7c8e"]
+
+[ext_resource type="Script" uid="uid://8bn6harjt5ah" path="res://scripts/SelectModeFront.gd" id="1_ip4fj"]
+[ext_resource type="Texture2D" uid="uid://cnvyvy2turptn" path="res://assets/sprites/icons/purge_icon.png" id="2_1la7l"]
+[ext_resource type="FontFile" uid="uid://bwxs0pdh6scle" path="res://assets/fonts/TitleStuff.ttf" id="3_qnc5s"]
+[ext_resource type="Texture2D" uid="uid://6iknpbh674ui" path="res://assets/sprites/icons/close_btn.png" id="3_xqvsq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2n4er"]
+bg_color = Color(0.16470589, 0.11764706, 0.101960786, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.95686275, 0.8156863, 0.54509807, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqvsq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2n4er"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1la7l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7bisr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ion18"]
+
+[node name="SelectMode" type="CanvasLayer" unique_id=90876763]
+script = ExtResource("1_ip4fj")
+
+[node name="Root" type="Control" parent="." unique_id=1903164380]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HintPanel" type="PanelContainer" parent="Root" unique_id=1068827081]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1780.0
+offset_top = -19.0
+offset_right = -1273.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2n4er")
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/HintPanel" unique_id=1302347183]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/HintPanel/MarginContainer" unique_id=573994309]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Root/HintPanel/MarginContainer/HBoxContainer" unique_id=1958905635]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_1la7l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HintLabel" type="Label" parent="Root/HintPanel/MarginContainer/HBoxContainer" unique_id=620700031]
+z_index = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(0.97966903, 0.9451979, 0.8662917, 1)
+theme_override_fonts/font = ExtResource("3_qnc5s")
+theme_override_font_sizes/font_size = 70
+text = "Tap a Fruit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CancelButton" type="Button" parent="Root" unique_id=869521717]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 200.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xqvsq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2n4er")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1la7l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7bisr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ion18")
+icon = ExtResource("3_xqvsq")
+flat = true
+autowrap_trim_flags = 192
+expand_icon = true
+
+[node name="SelectionFX" type="Node2D" parent="Root" unique_id=946682044]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Root" unique_id=140329332]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cwakpdrjm5g40"]
+
+[ext_resource type="Script" uid="uid://uwqwg7eth1rg" path="res://scripts/Confetti.gd" id="1_qanrn"]
+
+[node name="Root" type="Node2D" unique_id=343304309]
+script = ExtResource("1_qanrn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=574300816]

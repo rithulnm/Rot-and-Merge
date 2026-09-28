@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://br311lrctk8sc"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_8majg"]
+[ext_resource type="Texture2D" uid="uid://duxpbiejrng1k" path="res://assets/sprites/fruit/durian.png" id="2_8majg"]
+
+[resource]
+script = ExtResource("1_8majg")
+tier = 12
+fruit_name = "Durian"
+radius = 164.0
+rot_duration = 20.0
+score_value = 600
+poison_spread_count = 6
+texture = ExtResource("2_8majg")
+face_eye_type = 3
+face_mouth_default = 5
+face_personality = 2
+face_eye_separation = 45.0
+face_pupil_scale = Vector2(1.2, 1.5)
+face_mouth_position = Vector2(0, 40)
+face_mouth_scale = Vector2(1.5, 1.5)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

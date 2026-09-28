@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://bm7n0lwp8r3r7"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_2kupv"]
+[ext_resource type="Texture2D" uid="uid://cc6srvl6hj6ho" path="res://assets/sprites/fruit/grape.png" id="2_f3t7p"]
+
+[resource]
+script = ExtResource("1_2kupv")
+tier = 3
+fruit_name = "Grape"
+radius = 48.0
+rot_duration = 51.0
+score_value = 30
+poison_spread_count = 2
+texture = ExtResource("2_f3t7p")
+face_eye_type = 1
+face_mouth_default = 3
+face_eye_separation = 14.0
+face_eye_height = -9.0
+face_eye_scale = Vector2(0.45, 0.4)
+face_pupil_scale = Vector2(0.33, 0.33)
+face_mouth_position = Vector2(0, 6.5)
+face_mouth_scale = Vector2(0.4, 0.4)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://dqb1j8tn74rmy"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_nqcq8"]
+[ext_resource type="Texture2D" uid="uid://dx8sms03rqyx7" path="res://assets/sprites/fruit/pineapple.png" id="2_16i5s"]
+
+[resource]
+script = ExtResource("1_nqcq8")
+tier = 8
+fruit_name = "Pineapple"
+radius = 100.0
+rot_duration = 35.0
+score_value = 220
+poison_spread_count = 4
+texture = ExtResource("2_16i5s")
+face_eye_type = 4
+face_mouth_default = 3
+face_personality = 2
+face_eye_separation = 30.0
+face_eye_height = -20.0
+face_eye_scale = Vector2(0.9, 0.75)
+face_pupil_scale = Vector2(0.9, 0.9)
+face_mouth_position = Vector2(0, 20)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

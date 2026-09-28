@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://4ydl6qx8epec"]
+
+[ext_resource type="Script" uid="uid://dhcsrktbd75o2" path="res://scripts/Background.gd" id="1_nsm5t"]
+[ext_resource type="Texture2D" uid="uid://nh58q40yknff" path="res://assets/sprites/background/bulb.png" id="2_4i1qr"]
+[ext_resource type="Texture2D" uid="uid://dcn7hsmnrf0lo" path="res://assets/sprites/background/Tea_House.png" id="4_4i1qr"]
+[ext_resource type="Texture2D" uid="uid://ennaqhm7kbeg" path="res://assets/sprites/background/Warm_Shelf.png" id="5_hv2h2"]
+[ext_resource type="Texture2D" uid="uid://bvgqxmjphhq7i" path="res://assets/sprites/background/Night_Window.png" id="6_4i1qr"]
+[ext_resource type="Texture2D" uid="uid://djfprcny8oxpo" path="res://assets/sprites/background/fly.png" id="6_ui31t"]
+[ext_resource type="Texture2D" uid="uid://djrdbmc8nvx72" path="res://assets/sprites/background/Warm_Counter.png" id="7_2ygvi"]
+
+[sub_resource type="Gradient" id="Gradient_0ef86"]
+offsets = PackedFloat32Array(0.3831361, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kvi17"]
+gradient = SubResource("Gradient_0ef86")
+fill = 1
+fill_from = Vector2(0.4871795, 0.44957265)
+fill_to = Vector2(0.95897436, 0.6888889)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ynkqc"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(1, -1, 0)
+spread = 180.0
+flatness = 1.0
+initial_velocity_max = 141.76
+gravity = Vector3(0, 10, 0)
+scale_max = 4.4
+scale_over_velocity_max = 35.25
+hue_variation_min = -1.0
+hue_variation_max = 0.55999994
+
+[node name="Background" type="Control" unique_id=2086397630]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_nsm5t")
+
+[node name="Control" type="Control" parent="." unique_id=1981334078]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="FarSprite" type="TextureRect" parent="Control" unique_id=1657061243]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_4i1qr")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MidSprite" type="TextureRect" parent="Control" unique_id=1919032564]
+layout_mode = 1
+offset_left = 495.99997
+offset_top = 769.0
+offset_right = 1308.0
+offset_bottom = 1256.0
+scale = Vector2(0.605, 0.6)
+mouse_filter = 2
+texture = ExtResource("5_hv2h2")
+
+[node name="FrontSprite" type="TextureRect" parent="Control" unique_id=1350232568]
+layout_mode = 1
+offset_left = 108.99999
+offset_top = 501.0
+offset_right = 1060.0
+offset_bottom = 1985.0
+scale = Vector2(0.29277077, 0.28032348)
+mouse_filter = 2
+texture = ExtResource("6_4i1qr")
+
+[node name="Counter" type="TextureRect" parent="Control" unique_id=598075977]
+custom_minimum_size = Vector2(512, 429)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -306.99988
+offset_right = -293.69012
+offset_bottom = 446.46826
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.400926, 0.9359407)
+mouse_filter = 2
+texture = ExtResource("7_2ygvi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bulb" type="Node2D" parent="." unique_id=1656227675]
+z_index = 20
+position = Vector2(538, 268)
+
+[node name="BulbLight" type="PointLight2D" parent="Bulb" unique_id=214076657]
+position = Vector2(0, 84.851)
+rotation = -3.1415927
+scale = Vector2(0.3279478, -0.26914543)
+color = Color(0.36878654, 0.3410394, 0.2624812, 0.20500001)
+energy = 3.0
+shadow_filter_smooth = 2.0
+texture = SubResource("GradientTexture2D_kvi17")
+texture_scale = 35.0
+height = 400.0
+
+[node name="BulbSprite" type="Sprite2D" parent="Bulb" unique_id=1683726549]
+position = Vector2(0, 46)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("2_4i1qr")
+flip_h = true
+
+[node name="BulbParticles" type="GPUParticles2D" parent="Bulb" unique_id=584313838]
+modulate = Color(1, 1, 1, 0.56200004)
+position = Vector2(0, 155)
+scale = Vector2(3.400001, 1.4399998)
+amount = 25
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_ynkqc")
+
+[node name="Flies" type="Node2D" parent="." unique_id=1425105489]
+
+[node name="Fly1" type="Sprite2D" parent="Flies" unique_id=1113267805]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ui31t")
+
+[node name="Fly2" type="Sprite2D" parent="Flies" unique_id=1603799471]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ui31t")
+
+[node name="Fly3" type="Sprite2D" parent="Flies" unique_id=413287498]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ui31t")

@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://skh2byhncelm"]
+
+[ext_resource type="Script" uid="uid://vencniocyj3b" path="res://scripts/MainMenu.gd" id="1_vjtqc"]
+[ext_resource type="Script" uid="uid://ceko7ktliwggu" path="res://scripts/Camera.gd" id="2_e2per"]
+[ext_resource type="AudioStream" uid="uid://dt8p866hafeef" path="res://assets/audio/sfx/merge_pop_tier3.ogg" id="7_7vr37"]
+[ext_resource type="AudioStream" uid="uid://duty87chcypmj" path="res://assets/audio/sfx/menu_reveal.ogg" id="8_clp4r"]
+[ext_resource type="Texture2D" uid="uid://bs8adv02ykjlq" path="res://assets/sprites/decore/title.png" id="9_7vr37"]
+[ext_resource type="AudioStream" uid="uid://dxb8rfwqo1qjx" path="res://assets/audio/sfx/fruit_drop.ogg" id="9_clp4r"]
+[ext_resource type="AudioStream" uid="uid://bsme1yael6clx" path="res://assets/audio/sfx/btn_appear.ogg" id="9_ee60a"]
+[ext_resource type="AudioStream" uid="uid://tn6svftgdq0c" path="res://assets/audio/sfx/btn_click.ogg" id="10_ee60a"]
+[ext_resource type="AudioStream" uid="uid://1dpb0e8neovb" path="res://assets/audio/sfx/fruit_land.ogg" id="11_clp4r"]
+[ext_resource type="Texture2D" uid="uid://c3keubrli6mdh" path="res://assets/sprites/icons/play_btn.png" id="11_kncl5"]
+[ext_resource type="Texture2D" uid="uid://cnqayt3cy4enw" path="res://assets/sprites/icons/skin_btn.png" id="13_ee60a"]
+[ext_resource type="AudioStream" uid="uid://bhmumrq1mo8l0" path="res://assets/audio/music/menu_ambience.ogg" id="13_qjd48"]
+[ext_resource type="PackedScene" uid="uid://4ydl6qx8epec" path="res://scenes/game/Background.tscn" id="14_qjd48"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7uy2f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nqjyj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vr37"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kncl5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_clp4r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee60a"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.22690877, 0.10822757, 0.014511229, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 0)
+shadow_size = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ee60a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjd48"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ff4wq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nqw28"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bhu4a"]
+bounce = 0.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhu4a"]
+size = Vector2(1200, 302.4375)
+
+[node name="MainMenu" type="Control" unique_id=110249059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_vjtqc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=451205373]
+position = Vector2(540, 965)
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 15.0
+script = ExtResource("2_e2per")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1364261139]
+visible = false
+color = Color(0.101960786, 0.078431375, 0.0627451, 1)
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1237489339]
+layer = 100
+
+[node name="TitleLogo" type="TextureRect" parent="UILayer" unique_id=1029545123]
+custom_minimum_size = Vector2(1080, 400)
+offset_top = 673.0
+offset_right = 1080.0
+offset_bottom = 1073.0
+texture = ExtResource("9_7vr37")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PlayButton" type="Button" parent="UILayer" unique_id=508033416]
+custom_minimum_size = Vector2(320, 320)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 180.0
+offset_right = 150.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9607843, 0.9019608, 0.78431374, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7uy2f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nqjyj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7vr37")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_kncl5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_clp4r")
+icon = ExtResource("11_kncl5")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SkinButton" type="Button" parent="UILayer" unique_id=1287135049]
+custom_minimum_size = Vector2(220, 220)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -219.0
+offset_top = -612.0
+offset_right = -19.0
+offset_bottom = -412.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = SubResource("StyleBoxFlat_ee60a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ee60a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qjd48")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ff4wq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nqw28")
+icon = ExtResource("13_ee60a")
+expand_icon = true
+
+[node name="MenuAnimation" type="Node2D" parent="." unique_id=495742292]
+
+[node name="FruitContainer" type="Node2D" parent="MenuAnimation" unique_id=1526297182]
+z_index = 314
+
+[node name="LeftSpawn" type="Marker2D" parent="MenuAnimation" unique_id=1924428121]
+position = Vector2(-166, 754)
+
+[node name="RightSpawn" type="Marker2D" parent="MenuAnimation" unique_id=514626211]
+position = Vector2(1274, 713)
+
+[node name="MergeTarget" type="Marker2D" parent="MenuAnimation" unique_id=1933742587]
+position = Vector2(551, 564)
+
+[node name="Floor" type="StaticBody2D" parent="MenuAnimation" unique_id=1207871916]
+position = Vector2(549, 1952)
+physics_material_override = SubResource("PhysicsMaterial_bhu4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MenuAnimation/Floor" unique_id=166541314]
+z_index = 5
+position = Vector2(-5, 124.21875)
+shape = SubResource("RectangleShape2D_bhu4a")
+
+[node name="BackLayer" type="CanvasLayer" parent="." unique_id=1752100616]
+layer = -100
+
+[node name="Background" parent="BackLayer" unique_id=2086397630 instance=ExtResource("14_qjd48")]
+z_index = -100
+
+[node name="SFX_MenuMerge" type="AudioStreamPlayer" parent="." unique_id=1872912921]
+stream = ExtResource("7_7vr37")
+bus = &"SFX"
+
+[node name="SFX_MenuReveal" type="AudioStreamPlayer" parent="." unique_id=1295650844]
+stream = ExtResource("8_clp4r")
+volume_db = -25.0
+bus = &"SFX"
+
+[node name="SFX_BtnAppear" type="AudioStreamPlayer" parent="." unique_id=206440787]
+stream = ExtResource("9_ee60a")
+bus = &"SFX"
+
+[node name="SFX_BtnClick" type="AudioStreamPlayer" parent="." unique_id=908458110]
+stream = ExtResource("10_ee60a")
+max_polyphony = 2
+bus = &"SFX"
+
+[node name="SFX_FruitDrop" type="AudioStreamPlayer" parent="." unique_id=2104673275]
+stream = ExtResource("9_clp4r")
+max_polyphony = 2
+bus = &"SFX"
+
+[node name="SFX_FruitLand" type="AudioStreamPlayer" parent="." unique_id=1646899020]
+stream = ExtResource("11_clp4r")
+max_polyphony = 2
+bus = &"SFX"
+
+[node name="Music_Menu" type="AudioStreamPlayer" parent="." unique_id=705785665]
+stream = ExtResource("13_qjd48")
+bus = &"Music"

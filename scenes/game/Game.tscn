@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://bjrllmaaqbs6x"]
+
+[ext_resource type="Script" uid="uid://cct6hn8kw1bcr" path="res://scripts/Game.gd" id="1_klkup"]
+[ext_resource type="Texture2D" uid="uid://12o66dxwggnr" path="res://assets/sprites/jar.png" id="2_7qcb4"]
+[ext_resource type="Shader" uid="uid://djoxxnneqkgl6" path="res://shaders/Jar.gdshader" id="2_lyhax"]
+[ext_resource type="PackedScene" uid="uid://iliey3xay2e8" path="res://scenes/ui/HUD.tscn" id="2_m44fu"]
+[ext_resource type="PackedScene" uid="uid://djnewfvd72j6o" path="res://scenes/ui/DeathScreen.tscn" id="3_vrspl"]
+[ext_resource type="Shader" uid="uid://dfagu2kvc3hia" path="res://shaders/Vignette.gdshader" id="6_365ku"]
+[ext_resource type="PackedScene" uid="uid://lbnu877i7c8e" path="res://scenes/ui/SelectModeFront.tscn" id="7_gg4pt"]
+[ext_resource type="PackedScene" uid="uid://4ydl6qx8epec" path="res://scenes/game/Background.tscn" id="8_wnrko"]
+[ext_resource type="PackedScene" uid="uid://8wfc5qmfql6k" path="res://scenes/ui/AdPopup.tscn" id="9_qf6a8"]
+[ext_resource type="PackedScene" uid="uid://cqhnoeehcupy2" path="res://scenes/ui/SelectModeBack.tscn" id="10_56wml"]
+[ext_resource type="AudioStream" uid="uid://dxb8rfwqo1qjx" path="res://assets/audio/sfx/fruit_drop.ogg" id="11_aptqa"]
+[ext_resource type="AudioStream" uid="uid://1dpb0e8neovb" path="res://assets/audio/sfx/fruit_land.ogg" id="12_gynul"]
+[ext_resource type="AudioStream" uid="uid://bimkvgh1ytj12" path="res://assets/audio/sfx/powerup_click.ogg" id="13_2iokk"]
+[ext_resource type="AudioStream" uid="uid://bjh5o7tjbnu6d" path="res://assets/audio/sfx/powerup_pluck.ogg" id="15_2kuj7"]
+[ext_resource type="AudioStream" uid="uid://ensj1aomxdvb" path="res://assets/audio/sfx/milestone.ogg" id="15_vj8ay"]
+[ext_resource type="AudioStream" uid="uid://1akgxse37sxi" path="res://assets/audio/sfx/sfx_glitter.ogg" id="16_2kuj7"]
+[ext_resource type="AudioStream" uid="uid://ky8mlrsk5u5d" path="res://assets/audio/sfx/new_best.ogg" id="17_pbrru"]
+[ext_resource type="AudioStream" uid="uid://bc2cf0sy5cqap" path="res://assets/audio/music/game_ambience.ogg" id="18_vj8ay"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4kts"]
+size = Vector2(15.769226, 1304.925)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_klkup"]
+size = Vector2(15.128189, 1301.0751)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m44fu"]
+size = Vector2(875, 65)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_365ku"]
+shader = ExtResource("2_lyhax")
+shader_parameter/pulse_speed = 2.0
+shader_parameter/glow_strength = 0.8
+shader_parameter/glow_color = Color(0.19449991, 0.035764348, 0.035072517, 1)
+
+[sub_resource type="Gradient" id="Gradient_7qcb4"]
+colors = PackedColorArray(1, 0.9017999, 0.22576854, 0, 0.90982777, 0.62782896, 0.12315822, 0.43800002)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrspl"]
+size = Vector2(933, 46.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gg4pt"]
+shader = ExtResource("6_365ku")
+shader_parameter/intensity = 0.0
+shader_parameter/vignette_color = Color(1, 0, 0, 1)
+
+[node name="Game" type="Node2D" unique_id=1187696774 groups=["game"]]
+script = ExtResource("1_klkup")
+
+[node name="Jar" type="StaticBody2D" parent="." unique_id=645219658]
+position = Vector2(0, 46)
+collision_layer = 2
+
+[node name="LeftWall" type="CollisionShape2D" parent="Jar" unique_id=1522667969]
+position = Vector2(-412.30002, 100.57294)
+scale = Vector2(1.56, 1.1764245)
+shape = SubResource("RectangleShape2D_f4kts")
+
+[node name="RightWall" type="CollisionShape2D" parent="Jar" unique_id=2114023552]
+position = Vector2(411.80002, 95.308304)
+scale = Vector2(1.56, 1.1764245)
+shape = SubResource("RectangleShape2D_klkup")
+
+[node name="BottomWall" type="CollisionShape2D" parent="Jar" unique_id=1848654268]
+position = Vector2(2.5, 705.5)
+shape = SubResource("RectangleShape2D_m44fu")
+
+[node name="JarSprite" type="Sprite2D" parent="Jar" unique_id=1037620041]
+z_index = 100
+material = SubResource("ShaderMaterial_365ku")
+position = Vector2(0, 20.749966)
+scale = Vector2(1.5089285, 0.8616489)
+texture = ExtResource("2_7qcb4")
+
+[node name="DropZone" type="Node2D" parent="." unique_id=2008463556]
+z_index = 51
+position = Vector2(0, -772)
+
+[node name="DropBeam" type="Line2D" parent="DropZone" unique_id=2065117680]
+position = Vector2(7.0000005, 39)
+scale = Vector2(2.9166667, 0.9261786)
+points = PackedVector2Array(0, 0, 0, 798.3881, 0, 1600)
+width = 1.0
+default_color = Color(0.95440656, 1.6119872, 1.1938294, 0.8)
+gradient = SubResource("Gradient_7qcb4")
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="BeamGlow" type="Line2D" parent="DropZone" unique_id=1542975077]
+position = Vector2(12.000001, 76.931496)
+scale = Vector2(2.9166667, 0.903349)
+points = PackedVector2Array(0, 0, 0, 1600)
+width = 3.0
+default_color = Color(0.95440656, 1.6119872, 1.1938294, 0.080000006)
+gradient = SubResource("Gradient_7qcb4")
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="FruitContainer" type="Node2D" parent="." unique_id=276593493]
+z_index = 5
+
+[node name="DeathLine" type="Area2D" parent="." unique_id=1784972885]
+position = Vector2(0, -631)
+scale = Vector2(1, 0.19999999)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathLine" unique_id=155975209]
+shape = SubResource("RectangleShape2D_vrspl")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1762682783]
+position = Vector2(0, -100)
+zoom = Vector2(1.2, 1.13)
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+rotation_smoothing_enabled = true
+
+[node name="HUD" parent="." unique_id=655803136 instance=ExtResource("2_m44fu")]
+layer = 5
+
+[node name="DeathScreen" parent="." unique_id=1503432512 instance=ExtResource("3_vrspl")]
+layer = 10
+
+[node name="DropCooldown" type="Timer" parent="." unique_id=569842842]
+wait_time = 0.6
+one_shot = true
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1041250815]
+
+[node name="Vignette" type="ColorRect" parent="UILayer" unique_id=470274769]
+material = SubResource("ShaderMaterial_gg4pt")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 0)
+
+[node name="BackLayer" type="CanvasLayer" parent="." unique_id=188948615]
+layer = -100
+
+[node name="Background" parent="BackLayer" unique_id=1338662075 instance=ExtResource("8_wnrko")]
+z_index = -100
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=158470462]
+visible = false
+color = Color(0.22745098, 0.23921569, 0.27450982, 1)
+
+[node name="AdPopup" parent="." unique_id=1689793711 instance=ExtResource("9_qf6a8")]
+
+[node name="SelectModeFront" parent="." unique_id=90876763 instance=ExtResource("7_gg4pt")]
+layer = 10
+
+[node name="SelectModeBack" parent="." unique_id=554241018 instance=ExtResource("10_56wml")]
+layer = -1
+visible = false
+
+[node name="SFX_MergePop" type="AudioStreamPlayer" parent="." unique_id=920043755]
+max_polyphony = 4
+bus = &"SFX"
+
+[node name="SFX_FruitDrop" type="AudioStreamPlayer" parent="." unique_id=732822108]
+stream = ExtResource("11_aptqa")
+volume_db = -10.0
+max_polyphony = 4
+bus = &"SFX"
+
+[node name="SFX_FruitLand" type="AudioStreamPlayer" parent="." unique_id=555324521]
+stream = ExtResource("12_gynul")
+max_polyphony = 4
+bus = &"SFX"
+
+[node name="SFX_GameOver" type="AudioStreamPlayer" parent="." unique_id=1285395865]
+bus = &"SFX"
+
+[node name="SFX_PowerupClick" type="AudioStreamPlayer" parent="." unique_id=308977195]
+stream = ExtResource("13_2iokk")
+bus = &"SFX"
+
+[node name="SFX_PowerupSpecific" type="AudioStreamPlayer" parent="." unique_id=348687512]
+bus = &"SFX"
+
+[node name="SFX_SelectMergePop" type="AudioStreamPlayer" parent="." unique_id=1597731091]
+bus = &"SFX"
+
+[node name="SFX_Pluck" type="AudioStreamPlayer" parent="." unique_id=1009830497]
+stream = ExtResource("15_2kuj7")
+bus = &"SFX"
+
+[node name="SFX_Milestone" type="AudioStreamPlayer" parent="." unique_id=50120458]
+stream = ExtResource("15_vj8ay")
+volume_db = -30.0
+bus = &"SFX"
+
+[node name="SFX_KeyEarned" type="AudioStreamPlayer" parent="." unique_id=581146187]
+stream = ExtResource("16_2kuj7")
+bus = &"SFX"
+
+[node name="SFX_NewBest" type="AudioStreamPlayer" parent="." unique_id=1688071468]
+stream = ExtResource("17_pbrru")
+bus = &"SFX"
+
+[node name="Music_Game" type="AudioStreamPlayer" parent="." unique_id=281782235]
+stream = ExtResource("18_vj8ay")
+bus = &"Music"
+
+[connection signal="body_entered" from="DeathLine" to="." method="_on_death_line_body_entered"]
+[connection signal="body_exited" from="DeathLine" to="." method="_on_death_line_body_exited"]
+[connection signal="timeout" from="DropCooldown" to="." method="_on_drop_cooldown_timeout"]

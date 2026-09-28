@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://mopbnejhciqm"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_j6ljo"]
+[ext_resource type="Texture2D" uid="uid://dx0io66jy7nh3" path="res://assets/sprites/fruit/jackfruit.png" id="2_j6ljo"]
+
+[resource]
+script = ExtResource("1_j6ljo")
+tier = 13
+fruit_name = "Jackfruit"
+radius = 168.0
+rot_duration = 16.0
+score_value = 750
+poison_spread_count = 6
+texture = ExtResource("2_j6ljo")
+face_eye_type = 1
+face_mouth_default = 1
+face_personality = 1
+face_eye_separation = 40.0
+face_eye_height = -30.0
+face_eye_scale = Vector2(1.5, 1.5)
+face_pupil_scale = Vector2(1.5, 1.8)
+face_mouth_position = Vector2(0, 25)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

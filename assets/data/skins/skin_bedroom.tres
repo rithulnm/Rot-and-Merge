@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkinData" format=3 uid="uid://c7gdn0vgo1l61"]
+
+[ext_resource type="Texture2D" uid="uid://x7bj2umo5c0t" path="res://assets/sprites/background/Rainy_Japan.png" id="2_bdyf5"]
+[ext_resource type="Texture2D" uid="uid://cva5ji272t8y8" path="res://assets/sprites/background/Rainy_Shelf.png" id="3_sdsjh"]
+[ext_resource type="Texture2D" uid="uid://b2158xi5kehs8" path="res://assets/sprites/preview/Preview3.png" id="4_bdyf5"]
+[ext_resource type="Script" uid="uid://cy7dsomjqck4d" path="res://scripts/SkinData.gd" id="4_f070h"]
+
+[resource]
+script = ExtResource("4_f070h")
+skin_name = "Rainy Cafe"
+key_cost = 25
+far_texture = ExtResource("2_bdyf5")
+mid_texture = ExtResource("3_sdsjh")
+preview_texture = ExtResource("4_bdyf5")
+metadata/_custom_type_script = "uid://cy7dsomjqck4d"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://dac7gusa4hcp0"]
+
+[ext_resource type="Texture2D" uid="uid://xgfsmbwlsxm5" path="res://assets/sprites/fruit/melon_normal.png" id="1_opa2s"]
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_qpyn7"]
+[ext_resource type="Texture2D" uid="uid://c3oonh2ck023x" path="res://assets/sprites/fruit/melon.png" id="2_y65bj"]
+
+[resource]
+script = ExtResource("1_qpyn7")
+normal_texture = ExtResource("1_opa2s")
+tier = 9
+fruit_name = "Melon"
+radius = 110.0
+rot_duration = 30.0
+score_value = 280
+poison_spread_count = 5
+texture = ExtResource("2_y65bj")
+face_eye_type = 2
+face_mouth_default = 5
+face_personality = 3
+face_eye_separation = 32.0
+face_eye_scale = Vector2(0.9, 0.9)
+face_pupil_scale = Vector2(0.8, 0.8)
+face_mouth_position = Vector2(0, 20)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

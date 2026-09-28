@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://4ydl6qx8epec"]
+
+[ext_resource type="Script" uid="uid://dhcsrktbd75o2" path="res://scripts/Background.gd" id="1_nsm5t"]
+[ext_resource type="Texture2D" uid="uid://nh58q40yknff" path="res://assets/sprites/background/bulb.png" id="2_4i1qr"]
+[ext_resource type="Texture2D" uid="uid://c2lism85a0vli" path="res://assets/sprites/background/Warm_Bg.png" id="4_hv2h2"]
+[ext_resource type="Texture2D" uid="uid://ennaqhm7kbeg" path="res://assets/sprites/background/Warm_Shelf.png" id="5_hv2h2"]
+[ext_resource type="Texture2D" uid="uid://bvgqxmjphhq7i" path="res://assets/sprites/background/Night_Window.png" id="6_4i1qr"]
+[ext_resource type="Texture2D" uid="uid://djfprcny8oxpo" path="res://assets/sprites/background/fly.png" id="6_ui31t"]
+[ext_resource type="Texture2D" uid="uid://djrdbmc8nvx72" path="res://assets/sprites/background/Warm_Counter.png" id="7_2ygvi"]
+
+[sub_resource type="Gradient" id="Gradient_0ef86"]
+offsets = PackedFloat32Array(0.3831361, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kvi17"]
+gradient = SubResource("Gradient_0ef86")
+fill = 1
+fill_from = Vector2(0.4871795, 0.44957265)
+fill_to = Vector2(0.95897436, 0.6888889)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ynkqc"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(1, -1, 0)
+spread = 180.0
+flatness = 1.0
+initial_velocity_max = 141.76
+gravity = Vector3(0, 10, 0)
+scale_max = 4.4
+scale_over_velocity_max = 35.25
+hue_variation_min = -1.0
+hue_variation_max = 0.55999994
+
+[node name="Background" type="Node2D" unique_id=1338662075]
+script = ExtResource("1_nsm5t")
+
+[node name="BgSprite" type="Sprite2D" parent="." unique_id=1218833052]
+visible = false
+modulate = Color(0.6158285, 0.6158285, 0.6158284, 1)
+position = Vector2(-14.5000305, 563.00006)
+scale = Vector2(0.835, 0.85)
+
+[node name="Bulb" type="Node2D" parent="." unique_id=1656227675]
+position = Vector2(0, -720)
+
+[node name="BulbLight" type="PointLight2D" parent="Bulb" unique_id=214076657]
+position = Vector2(0, 84.851)
+rotation = -3.1415927
+scale = Vector2(0.3279478, -0.26914543)
+color = Color(0.36878654, 0.3410394, 0.2624812, 0.20500001)
+energy = 16.0
+shadow_filter_smooth = 2.0
+texture = SubResource("GradientTexture2D_kvi17")
+texture_scale = 35.65
+height = 400.0
+
+[node name="BulbSprite" type="Sprite2D" parent="Bulb" unique_id=1683726549]
+position = Vector2(0, 45)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("2_4i1qr")
+flip_h = true
+
+[node name="BulbParticles" type="GPUParticles2D" parent="Bulb" unique_id=584313838]
+modulate = Color(1, 1, 1, 0.56200004)
+position = Vector2(0, 155)
+scale = Vector2(3.400001, 1.4399998)
+amount = 25
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_ynkqc")
+
+[node name="Flies" type="Node2D" parent="." unique_id=1425105489]
+
+[node name="Fly1" type="Sprite2D" parent="Flies" unique_id=1113267805]
+visible = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ui31t")
+
+[node name="Fly2" type="Sprite2D" parent="Flies" unique_id=1603799471]
+visible = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ui31t")
+
+[node name="Fly3" type="Sprite2D" parent="Flies" unique_id=413287498]
+visible = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ui31t")
+
+[node name="Control" type="Control" parent="." unique_id=1981334078]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="ParallaxBackground" parent="Control" unique_id=1852872289]
+
+[node name="FarSprite" type="Sprite2D" parent="Control/Background" unique_id=627088032]
+position = Vector2(540, 1039)
+scale = Vector2(0.5, 0.58)
+texture = ExtResource("4_hv2h2")
+
+[node name="MidSprite" type="Sprite2D" parent="Control/Background" unique_id=1371452901]
+position = Vector2(731.00006, 866)
+scale = Vector2(0.775, 0.769)
+texture = ExtResource("5_hv2h2")
+
+[node name="FrontSprite" type="Sprite2D" parent="Control/Background" unique_id=140168392]
+visible = false
+position = Vector2(222.7875, 699)
+scale = Vector2(0.29277077, 0.28032348)
+texture = ExtResource("6_4i1qr")
+
+[node name="Counter" type="Sprite2D" parent="Control/Background" unique_id=1396511608]
+visible = false
+position = Vector2(579.00006, 2115.2407)
+scale = Vector2(1.400926, 0.9359407)
+texture = ExtResource("7_2ygvi")

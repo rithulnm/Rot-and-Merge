@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cnoft1ht6kfq"]
+
+[ext_resource type="Script" uid="uid://be5joyngdibgk" path="res://scripts/Ribbon.gd" id="1_yivxb"]
+
+[node name="Root" type="Node2D" unique_id=1273958623]
+script = ExtResource("1_yivxb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=526477750]

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://3y0gkvxr1jub"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_cji22"]
+[ext_resource type="Texture2D" uid="uid://00wlfmwn53uf" path="res://assets/sprites/fruit/orange.png" id="2_uno4w"]
+
+[resource]
+script = ExtResource("1_cji22")
+tier = 4
+fruit_name = "Orange"
+radius = 56.0
+rot_duration = 48.0
+score_value = 50
+poison_spread_count = 2
+texture = ExtResource("2_uno4w")
+face_eye_type = 2
+face_mouth_default = 5
+face_personality = 1
+face_eye_separation = 14.0
+face_eye_height = -9.5
+face_eye_scale = Vector2(0.38, 0.3)
+face_pupil_scale = Vector2(0.4, 0.4)
+face_mouth_position = Vector2(0, 7)
+face_mouth_scale = Vector2(0.38, 0.38)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

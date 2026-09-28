@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://brqwm4copxlsg"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_7h0i8"]
+[ext_resource type="Texture2D" uid="uid://cv25l7hvpk2by" path="res://assets/sprites/fruit/dragonfruit.png" id="2_7h0i8"]
+
+[resource]
+script = ExtResource("1_7h0i8")
+tier = 15
+fruit_name = "Dragon Fruit"
+radius = 200.0
+rot_duration = 10.0
+score_value = 1500
+poison_spread_count = 7
+texture = ExtResource("2_7h0i8")
+face_eye_type = 3
+face_mouth_default = 1
+face_personality = 4
+face_eye_separation = 50.0
+face_eye_height = -20.0
+face_eye_scale = Vector2(1.2, 1.2)
+face_pupil_scale = Vector2(1.1, 1.1)
+face_mouth_position = Vector2(0, 20)
+face_mouth_scale = Vector2(1.2, 1.2)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

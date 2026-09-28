@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://ck8j2d72ar6r8"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_i4siw"]
+[ext_resource type="Texture2D" uid="uid://c3c6hy2uv430f" path="res://assets/sprites/fruit/strawberry.png" id="2_7ld64"]
+
+[resource]
+script = ExtResource("1_i4siw")
+tier = 2
+fruit_name = "Strawberry"
+radius = 38.0
+rot_duration = 55.0
+score_value = 20
+texture = ExtResource("2_7ld64")
+face_mouth_default = 5
+face_personality = 1
+face_eye_separation = 13.0
+face_eye_height = -9.0
+face_eye_scale = Vector2(0.4, 0.4)
+face_pupil_scale = Vector2(0.35, 0.35)
+face_mouth_scale = Vector2(0.4, 0.4)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://cg15d5hewo0yk"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_acuo3"]
+[ext_resource type="Texture2D" uid="uid://bmr2ccb0rrl7v" path="res://assets/sprites/fruit/coconut.png" id="2_acuo3"]
+
+[resource]
+script = ExtResource("1_acuo3")
+tier = 11
+fruit_name = "Coconut"
+radius = 140.0
+rot_duration = 25.0
+score_value = 450
+poison_spread_count = 5
+texture = ExtResource("2_acuo3")
+face_eye_separation = 40.0
+face_eye_height = -20.0
+face_eye_scale = Vector2(1.2, 1.2)
+face_mouth_position = Vector2(0, 13)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

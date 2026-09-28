@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://8wfc5qmfql6k"]
+
+[ext_resource type="Script" uid="uid://v14vu85qauf6" path="res://scripts/AdPopup.gd" id="1_fcxwn"]
+[ext_resource type="FontFile" uid="uid://bwxs0pdh6scle" path="res://assets/fonts/TitleStuff.ttf" id="2_fcxwn"]
+[ext_resource type="FontFile" uid="uid://b55ut5qmgf11y" path="res://assets/fonts/SubtitleStuff.ttf" id="3_fcxwn"]
+[ext_resource type="FontFile" uid="uid://cw8hmlebuur1m" path="res://assets/fonts/MPLUSRounded1c-Black.ttf" id="4_o4dsu"]
+
+[sub_resource type="Gradient" id="Gradient_nowt2"]
+colors = PackedColorArray(0.08906976, 0.054891825, 0.0058169533, 1, 5.198121e-06, 0.6291801, 0.7017892, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fcxwn"]
+gradient = SubResource("Gradient_nowt2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o4dsu"]
+texture = SubResource("GradientTexture2D_fcxwn")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fcxwn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o4dsu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tec1u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hkf63"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o6eyc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rl3r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_305bj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47w0f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83m0f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rlxaf"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1689793711]
+script = ExtResource("1_fcxwn")
+
+[node name="Root" type="Control" parent="." unique_id=1691092462]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DarkOverlay" type="ColorRect" parent="Root" unique_id=1288273446]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.35200003)
+
+[node name="Panel" type="Panel" parent="Root" unique_id=1964264505]
+modulate = Color(0.92273736, 0.9227374, 0.92273736, 1)
+self_modulate = Color(0.5931336, 0.59313357, 0.59313357, 1)
+custom_minimum_size = Vector2(800, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -439.0
+offset_top = -243.0
+offset_right = 440.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_o4dsu")
+
+[node name="TitleLabel" type="Label" parent="Root/Panel" unique_id=846879774]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -198.0
+offset_right = 2.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9098039, 0.627451, 0.1254902, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_fcxwn")
+theme_override_font_sizes/font_size = 95
+text = "Not Enough Coins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescriptionLabel" type="Label" parent="Root/Panel" unique_id=323979500]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.5
+offset_top = -34.5
+offset_right = 226.5
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_fcxwn")
+theme_override_font_sizes/font_size = 35
+text = "Watch an ad to get a free powerup"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/Panel" unique_id=706463887]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="WatchAdButton" type="Button" parent="Root/Panel/HBoxContainer" unique_id=185690550]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9607843, 0.9019608, 0.78431374, 1)
+theme_override_fonts/font = ExtResource("4_o4dsu")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fcxwn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_o4dsu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tec1u")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hkf63")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o6eyc")
+text = "Watch Ad"
+
+[node name="CancelButton" type="Button" parent="Root/Panel/HBoxContainer" unique_id=620685960]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9607843, 0.9019608, 0.78431374, 1)
+theme_override_fonts/font = ExtResource("4_o4dsu")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7rl3r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_305bj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_47w0f")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_83m0f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rlxaf")
+text = "Cancel"

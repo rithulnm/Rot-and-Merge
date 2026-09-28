@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://uv5mvt3j3tiq"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_3rwxd"]
+[ext_resource type="Texture2D" uid="uid://v1rpbwr4ya8x" path="res://assets/sprites/fruit/peach.png" id="2_c7qxt"]
+
+[resource]
+script = ExtResource("1_3rwxd")
+tier = 7
+fruit_name = "Peach"
+radius = 84.0
+rot_duration = 38.0
+score_value = 180
+poison_spread_count = 4
+texture = ExtResource("2_c7qxt")
+face_mouth_default = 1
+face_personality = 3
+face_eye_separation = 20.0
+face_eye_height = -18.0
+face_eye_scale = Vector2(0.65, 0.65)
+face_pupil_scale = Vector2(0.7, 0.8)
+face_mouth_position = Vector2(0, 15)
+face_mouth_scale = Vector2(0.5, 0.8)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

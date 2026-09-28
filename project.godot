@@ -1,0 +1,61 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="fruiter"
+run/main_scene="uid://skh2byhncelm"
+config/features=PackedStringArray("4.6", "Mobile")
+boot_splash/bg_color=Color(0.75686276, 0.3254902, 0.12156863, 1)
+boot_splash/image="uid://nqegx444ibmj"
+config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://qm48rn41pykt"
+
+[autoload]
+
+GameManager="*uid://b50ka8qygg8v2"
+ConsentManager="*uid://cfuy4ha5irl6g"
+SceneTransition="*uid://2h168sg624go"
+AdsManager="*uid://b6vn02we1po54"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/admob/plugin.cfg")
+
+[layer_names]
+
+2d_physics/layer_1="fruits"
+2d_physics/layer_2="walls"
+2d_physics/layer_3="drop_zone"
+
+[physics]
+
+common/physics_ticks_per_second=120
+3d/physics_engine="Jolt Physics"
+2d/default_gravity=1200.0
+2d/solver/solver_iterations=24
+2d/solver/contact_max_allowed_penetration=0.01
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

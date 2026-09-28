@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://skh2byhncelm"]
+
+[ext_resource type="Script" uid="uid://vencniocyj3b" path="res://scripts/MainMenu.gd" id="1_vjtqc"]
+[ext_resource type="FontFile" uid="uid://cqpxxideqfxpe" path="res://assets/fonts/ChangaOne-Regular.ttf" id="2_2ysvc"]
+[ext_resource type="Texture2D" uid="uid://lmfiahpwy0h4" path="res://assets/sprites/background/far_sprite.png" id="2_bhu4a"]
+[ext_resource type="FontFile" uid="uid://sytkdxk2n42f" path="res://assets/fonts/ArchivoBlack-Regular.ttf" id="3_xpiny"]
+[ext_resource type="FontFile" uid="uid://duw8x1n5ps8ij" path="res://assets/fonts/SpecialElite-Regular.ttf" id="4_2ysvc"]
+[ext_resource type="Texture2D" uid="uid://5malg6wsbsy0" path="res://assets/sprites/background/bulb_normal.png" id="5_bhu4a"]
+
+[sub_resource type="Gradient" id="Gradient_0ef86"]
+offsets = PackedFloat32Array(0.3831361, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7mi0g"]
+gradient = SubResource("Gradient_0ef86")
+fill = 1
+fill_from = Vector2(0.4871795, 0.44957265)
+fill_to = Vector2(0.95897436, 0.6888889)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nqjyj"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 128.0
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(1, -1, 0)
+spread = 180.0
+flatness = 1.0
+initial_velocity_max = 141.76
+gravity = Vector3(0, 10, 0)
+scale_max = 4.4
+scale_over_velocity_max = 35.25
+color = Color(0.99490803, 0.84275323, 0.46868324, 1)
+hue_variation_min = -1.0
+hue_variation_max = -1.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xpiny"]
+lifetime_randomness = 1.0
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+particle_flag_damping_as_friction = true
+emission_shape = 3
+emission_box_extents = Vector3(100, 100, 1)
+spread = 100.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 40, 0)
+damping_max = 10.0
+scale_min = 0.0
+scale_max = 5.0
+hue_variation_min = -0.100000024
+hue_variation_max = 0.09999997
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e2per"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7mi0g"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bhu4a"]
+bounce = 0.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhu4a"]
+size = Vector2(1200, 40)
+
+[sub_resource type="GDScript" id="GDScript_xpiny"]
+script/source = "extends Camera2D
+var bulb_angle := 0.0
+var bulb_vel := 0.0
+const SPRING := 0.008
+const DAMPEN := 0.97
+
+var time := 0.0
+
+func _process(delta):
+
+	time += delta
+
+	offset.x = sin(time * 0.5) * 8.0
+	offset.y = cos(time * 0.4) * 5.0
+"
+
+[node name="MainMenu" type="CanvasLayer" unique_id=2117026471]
+script = ExtResource("1_vjtqc")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1364261139]
+visible = false
+color = Color(0.025840001, 0.025840001, 0.025840001, 1)
+
+[node name="Root" type="Control" parent="." unique_id=1772585225]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="ParallaxBackground" parent="Root" unique_id=2112873968]
+
+[node name="FarLayer" type="ParallaxLayer" parent="Root/Background" unique_id=1845158849]
+position = Vector2(527, 964)
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="FarSprite" type="Sprite2D" parent="Root/Background/FarLayer" unique_id=1660095233]
+position = Vector2(293, 15.999908)
+scale = Vector2(3.7731736, 3.3958335)
+texture = ExtResource("2_bhu4a")
+
+[node name="MidLayer" type="ParallaxLayer" parent="Root/Background" unique_id=1389647532]
+position = Vector2(527, 964)
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="MidSprite" type="Sprite2D" parent="Root/Background/MidLayer" unique_id=958279483]
+
+[node name="FrontLayer" type="ParallaxLayer" parent="Root/Background" unique_id=2026459817]
+position = Vector2(527, 964)
+motion_scale = Vector2(0.8, 0.8)
+
+[node name="FrontSprite" type="Sprite2D" parent="Root/Background/FrontLayer" unique_id=252608273]
+
+[node name="Environment" type="Node" parent="Root" unique_id=1724056730]
+
+[node name="Bulb" type="Node2D" parent="Root/Environment" unique_id=294232247]
+position = Vector2(527, 214)
+
+[node name="BulbLight" type="PointLight2D" parent="Root/Environment/Bulb" unique_id=1277824448]
+position = Vector2(0, 84.851)
+rotation = -3.1415927
+scale = Vector2(0.3279478, -0.26914543)
+color = Color(0.41366664, 0.3303858, 0.13247532, 0.20392157)
+energy = 1.2
+shadow_filter_smooth = 2.0
+texture = SubResource("GradientTexture2D_7mi0g")
+texture_scale = 21.75
+height = 400.0
+
+[node name="BulbSprite" type="Sprite2D" parent="Root/Environment/Bulb" unique_id=177197092]
+position = Vector2(6.328126, 44.562473)
+scale = Vector2(2.11875, 1.7584957)
+texture = ExtResource("5_bhu4a")
+
+[node name="BulbParticles" type="GPUParticles2D" parent="Root/Environment/Bulb" unique_id=880198099]
+modulate = Color(1, 1, 1, 0.56200004)
+position = Vector2(0, 155)
+scale = Vector2(3.400001, 1.4399998)
+amount = 25
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_nqjyj")
+
+[node name="Wire" type="Line2D" parent="Root/Environment/Bulb" unique_id=40201385]
+points = PackedVector2Array(0, -1230, 4, -100, 0, 0)
+width = 3.0
+default_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+
+[node name="Flies" type="Node2D" parent="Root/Environment" unique_id=1774659517]
+position = Vector2(527, 964)
+
+[node name="Fly1" type="AnimatedSprite2D" parent="Root/Environment/Flies" unique_id=951848203]
+
+[node name="Fly2" type="AnimatedSprite2D" parent="Root/Environment/Flies" unique_id=1439780869]
+
+[node name="Fly3" type="AnimatedSprite2D" parent="Root/Environment/Flies" unique_id=1924461556]
+
+[node name="AmbientParticles" type="GPUParticles2D" parent="Root/Environment" unique_id=97652652]
+position = Vector2(526.99994, 964)
+scale = Vector2(7.719999, 12.4800005)
+amount = 100
+lifetime = 10.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_xpiny")
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1237489339]
+layer = 100
+
+[node name="TitleLabel" type="Label" parent="UILayer" unique_id=1626939635]
+offset_left = 106.0
+offset_top = 812.0
+offset_right = 981.0
+offset_bottom = 974.0
+theme_override_fonts/font = ExtResource("2_2ysvc")
+theme_override_font_sizes/font_size = 151
+text = "ROT & MERGE"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SubtitleLabel" type="Label" parent="UILayer" unique_id=2085415434]
+offset_left = 316.0
+offset_top = 975.0
+offset_right = 712.0
+offset_bottom = 1029.0
+theme_override_fonts/font = ExtResource("3_xpiny")
+theme_override_font_sizes/font_size = 48
+text = "survive the rot"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayButton" type="Button" parent="UILayer" unique_id=508033416]
+custom_minimum_size = Vector2(300, 80)
+offset_left = 100.0
+offset_top = 1304.0
+offset_right = 975.0
+offset_bottom = 1405.0
+theme_override_fonts/font = ExtResource("4_2ysvc")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e2per")
+text = "PLAY"
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SkinButton" type="Button" parent="UILayer" unique_id=1287135049]
+custom_minimum_size = Vector2(300, 90)
+offset_left = 100.0
+offset_top = 1458.0
+offset_right = 975.0
+offset_bottom = 1554.0
+theme_override_fonts/font = ExtResource("4_2ysvc")
+theme_override_font_sizes/font_size = 95
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7mi0g")
+text = "SKINS"
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuAnimation" type="Node2D" parent="." unique_id=495742292]
+
+[node name="FruitContainer" type="Node2D" parent="MenuAnimation" unique_id=1526297182]
+
+[node name="LeftSpawn" type="Marker2D" parent="MenuAnimation" unique_id=1924428121]
+position = Vector2(-166, 754)
+
+[node name="RightSpawn" type="Marker2D" parent="MenuAnimation" unique_id=514626211]
+position = Vector2(1274, 713)
+
+[node name="MergeTarget" type="Marker2D" parent="MenuAnimation" unique_id=1933742587]
+position = Vector2(551, 564)
+
+[node name="Floor" type="StaticBody2D" parent="MenuAnimation" unique_id=1207871916]
+position = Vector2(550, 1805)
+physics_material_override = SubResource("PhysicsMaterial_bhu4a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MenuAnimation/Floor" unique_id=166541314]
+shape = SubResource("RectangleShape2D_bhu4a")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=451205373]
+position = Vector2(543, 835)
+zoom = Vector2(0.55, 0.55)
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 15.0
+script = SubResource("GDScript_xpiny")

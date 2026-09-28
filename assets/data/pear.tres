@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://bh6jcaugvabch"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_io8cb"]
+[ext_resource type="Texture2D" uid="uid://dhypct2mkpsoa" path="res://assets/sprites/fruit/pear.png" id="2_tw1f2"]
+
+[resource]
+script = ExtResource("1_io8cb")
+tier = 6
+fruit_name = "Pear"
+radius = 74.0
+rot_duration = 40.0
+score_value = 120
+poison_spread_count = 3
+texture = ExtResource("2_tw1f2")
+face_eye_type = 3
+face_personality = 4
+face_eye_separation = 20.0
+face_eye_height = -16.0
+face_eye_scale = Vector2(0.5, 0.5)
+face_pupil_scale = Vector2(0.5, 0.5)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

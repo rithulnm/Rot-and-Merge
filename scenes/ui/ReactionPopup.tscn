@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://w1f5m4ya361h"]
+
+[ext_resource type="Script" uid="uid://bt1s0ugcm2g3w" path="res://scripts/ReactionPopup.gd" id="1_elhnv"]
+
+[node name="Node2D" type="Node2D" unique_id=2108473159]
+script = ExtResource("1_elhnv")
+
+[node name="Sticker" type="Sprite2D" parent="." unique_id=1538521225]

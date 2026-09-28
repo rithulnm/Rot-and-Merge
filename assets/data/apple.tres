@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://ckjmpwf4xfvjl"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_jx610"]
+[ext_resource type="Texture2D" uid="uid://clyg7ub8wdw1s" path="res://assets/sprites/fruit/apple.png" id="2_bo62p"]
+
+[resource]
+script = ExtResource("1_jx610")
+tier = 5
+fruit_name = "Apple"
+radius = 62.0
+rot_duration = 45.0
+score_value = 80
+poison_spread_count = 3
+texture = ExtResource("2_bo62p")
+face_mouth_default = 1
+face_personality = 3
+face_eye_separation = 15.0
+face_eye_height = -9.5
+face_eye_scale = Vector2(0.36, 0.36)
+face_pupil_scale = Vector2(0.32, 0.32)
+face_mouth_position = Vector2(0, 7)
+face_mouth_scale = Vector2(0.5, 0.5)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

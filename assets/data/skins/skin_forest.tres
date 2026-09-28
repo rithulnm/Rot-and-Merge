@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkinData" format=3 uid="uid://cj0vkcsh4i46k"]
+
+[ext_resource type="Texture2D" uid="uid://dtq1atj2yvdwv" path="res://assets/sprites/background/Witch_Bg.png" id="2_3agtd"]
+[ext_resource type="Script" uid="uid://cy7dsomjqck4d" path="res://scripts/SkinData.gd" id="2_ctypq"]
+[ext_resource type="Texture2D" uid="uid://c56ah0dm0012r" path="res://assets/sprites/background/Witch_Shelf.png" id="3_3agtd"]
+[ext_resource type="Texture2D" uid="uid://3eogyokitf2n" path="res://assets/sprites/preview/Preview4.png" id="4_tmj05"]
+
+[resource]
+script = ExtResource("2_ctypq")
+skin_name = "Witch_Room"
+key_cost = 45
+far_texture = ExtResource("2_3agtd")
+mid_texture = ExtResource("3_3agtd")
+preview_texture = ExtResource("4_tmj05")
+metadata/_custom_type_script = "uid://cy7dsomjqck4d"

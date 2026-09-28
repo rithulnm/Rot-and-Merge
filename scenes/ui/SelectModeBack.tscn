@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cqhnoeehcupy2"]
+
+[node name="SelectMode" type="CanvasLayer" unique_id=90876763]
+
+[node name="Root" type="Control" parent="." unique_id=1903164380]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DarkOverlay" type="ColorRect" parent="Root" unique_id=1871382755]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.81000006)
+
+[node name="BlurOverlay" type="ColorRect" parent="Root" unique_id=1885250934]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.46015894, 0.21802102, 0.11207495, 0.44300002)

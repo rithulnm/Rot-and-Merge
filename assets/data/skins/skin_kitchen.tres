@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkinData" format=3 uid="uid://c1aflemiwasbf"]
+
+[ext_resource type="Texture2D" uid="uid://c2lism85a0vli" path="res://assets/sprites/background/Warm_Bg.png" id="1_akn00"]
+[ext_resource type="Script" uid="uid://cy7dsomjqck4d" path="res://scripts/SkinData.gd" id="2_akn00"]
+[ext_resource type="Texture2D" uid="uid://ennaqhm7kbeg" path="res://assets/sprites/background/Warm_Shelf.png" id="3_cx610"]
+[ext_resource type="Texture2D" uid="uid://8fbfe0kt45jx" path="res://assets/sprites/preview/Preview1.png" id="4_cx610"]
+
+[resource]
+script = ExtResource("2_akn00")
+skin_name = "Warm Kitchen"
+far_texture = ExtResource("1_akn00")
+mid_texture = ExtResource("3_cx610")
+preview_texture = ExtResource("4_cx610")
+metadata/_custom_type_script = "uid://cy7dsomjqck4d"

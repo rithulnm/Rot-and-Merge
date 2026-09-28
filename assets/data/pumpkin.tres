@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://bmt53ueutq6i2"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_o2x60"]
+[ext_resource type="Texture2D" uid="uid://dam44yfjvm6nb" path="res://assets/sprites/fruit/pumpkin.png" id="2_o2x60"]
+
+[resource]
+script = ExtResource("1_o2x60")
+tier = 14
+fruit_name = "Pumpkin"
+radius = 180.0
+rot_duration = 13.0
+score_value = 1000
+poison_spread_count = 7
+texture = ExtResource("2_o2x60")
+face_mouth_default = 4
+face_personality = 2
+face_eye_separation = 45.0
+face_eye_height = -30.0
+face_eye_scale = Vector2(1.4, 1.4)
+face_pupil_scale = Vector2(1, 1.6)
+face_mouth_position = Vector2(0, 20)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

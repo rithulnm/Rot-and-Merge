@@ -1,0 +1,399 @@
+[gd_scene format=3 uid="uid://cwlyhuobbe8fn"]
+
+[ext_resource type="Script" uid="uid://beer1bj6r6qvx" path="res://scenes/ui/SkinSelect.gd" id="1_5pq5t"]
+[ext_resource type="Texture2D" uid="uid://dcn7hsmnrf0lo" path="res://assets/sprites/background/Tea_House.png" id="2_lg1pb"]
+[ext_resource type="FontFile" uid="uid://bwxs0pdh6scle" path="res://assets/fonts/TitleStuff.ttf" id="3_lg1pb"]
+[ext_resource type="Texture2D" uid="uid://nh58q40yknff" path="res://assets/sprites/background/bulb.png" id="4_lg1pb"]
+[ext_resource type="Texture2D" uid="uid://chvfhymvpme6l" path="res://assets/sprites/icons/keys_icon.png" id="4_svtpl"]
+[ext_resource type="FontFile" uid="uid://cw8hmlebuur1m" path="res://assets/fonts/MPLUSRounded1c-Black.ttf" id="6_liehy"]
+[ext_resource type="Texture2D" uid="uid://ddxobic3u0pdf" path="res://assets/sprites/sidebtn_right.png" id="7_liehy"]
+[ext_resource type="FontFile" uid="uid://sytkdxk2n42f" path="res://assets/fonts/ArchivoBlack-Regular.ttf" id="8_lg1pb"]
+[ext_resource type="Texture2D" uid="uid://b7l3rekbtc1ci" path="res://assets/sprites/sidebtn_left.png" id="9_liehy"]
+[ext_resource type="AudioStream" uid="uid://tn6svftgdq0c" path="res://assets/audio/sfx/btn_click.ogg" id="11_liehy"]
+[ext_resource type="Texture2D" uid="uid://cgmh0c2tfv85x" path="res://assets/sprites/icons/lock_btn.png" id="11_w1o6b"]
+[ext_resource type="AudioStream" uid="uid://bk6ha2m25ax4o" path="res://assets/audio/sfx/denied.ogg" id="12_27hac"]
+[ext_resource type="AudioStream" uid="uid://cwgk2po1av2nb" path="res://assets/audio/sfx/unlock.ogg" id="13_76qhd"]
+[ext_resource type="AudioStream" uid="uid://dlxypbgvlotge" path="res://assets/audio/music/skin_ambience.ogg" id="14_76qhd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_liehy"]
+bg_color = Color(0.1764706, 0.12156863, 0.05490196, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9098039, 0.627451, 0.1254902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76qhd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pmc4b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nwswy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tyr1x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxnh7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1o6b"]
+bg_color = Color(0.101960786, 0.078431375, 0.0627451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.83137256, 0.6862745, 0.21568628, 1)
+
+[sub_resource type="Gradient" id="Gradient_lg1pb"]
+colors = PackedColorArray(0.83137256, 0.6862745, 0.21568628, 1, 0.9913698, 0.9463995, 0.8173696, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w1o6b"]
+gradient = SubResource("Gradient_lg1pb")
+fill = 1
+fill_from = Vector2(0.4905983, 0.45982906)
+fill_to = Vector2(0.008547009, 0.011965812)
+
+[sub_resource type="Gradient" id="Gradient_liehy"]
+colors = PackedColorArray(0.9745639, 0.60752493, 0.3185105, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_27hac"]
+gradient = SubResource("Gradient_liehy")
+fill = 2
+fill_from = Vector2(0.05982906, 0.9247863)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27hac"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 20
+expand_margin_top = 15.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76qhd"]
+bg_color = Color(0.1764706, 0.12156863, 0.05490196, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.98087174, 0.7829748, 0.48561788, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6npg8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lg1pb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_liehy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1o6b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_27hac"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aic7r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i75dw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_inqbd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6n8pa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_au2n1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vi43v"]
+
+[node name="SkinSelect" type="Control" unique_id=2132212867]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5pq5t")
+
+[node name="Root" type="Control" parent="." unique_id=1214037666]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BgTexture" type="TextureRect" parent="Root" unique_id=1105946654]
+modulate = Color(0.7112967, 0.7112965, 0.7112965, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_lg1pb")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TitleLabel" type="Label" parent="Root" unique_id=678771231]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -182.5
+offset_top = 153.0
+offset_right = 182.5
+offset_bottom = 215.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.97222275, 0.9500014, 0.93354887, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.15847632, 0.097070254, 0.018730106, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 20
+theme_override_fonts/font = ExtResource("3_lg1pb")
+theme_override_font_sizes/font_size = 75
+text = "SKINS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BulbSprite" type="Sprite2D" parent="Root" unique_id=1374258829]
+position = Vector2(825, 150)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("4_lg1pb")
+
+[node name="NectarPanel" type="PanelContainer" parent="Root" unique_id=794438119]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -979.0
+offset_top = 348.0
+offset_right = -846.0
+offset_bottom = 442.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_liehy")
+
+[node name="NectarHBox" type="HBoxContainer" parent="Root/NectarPanel" unique_id=2023207244]
+layout_mode = 2
+alignment = 1
+
+[node name="NectarIcon" type="TextureRect" parent="Root/NectarPanel/NectarHBox" unique_id=786846997]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("4_svtpl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NectarLabel" type="Label" parent="Root/NectarPanel/NectarHBox" unique_id=1521705045]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98285526, 0.91551054, 0.8343149, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("6_liehy")
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="BackButton" type="Button" parent="Root" unique_id=1122558224]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1080.0
+offset_top = 7.0
+offset_right = -880.0
+offset_bottom = 207.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_76qhd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pmc4b")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nwswy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tyr1x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hxnh7")
+icon = ExtResource("7_liehy")
+expand_icon = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root" unique_id=60358999]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.5
+offset_top = -665.0
+offset_right = 261.5
+offset_bottom = 665.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="MainCard" type="PanelContainer" parent="Root/VBoxContainer" unique_id=1028548105]
+custom_minimum_size = Vector2(550, 946)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w1o6b")
+
+[node name="GoldGlow" type="TextureRect" parent="Root/VBoxContainer/MainCard" unique_id=484104215]
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_w1o6b")
+
+[node name="UnlockFX" type="Node2D" parent="Root/VBoxContainer/MainCard" unique_id=1239809658]
+z_index = 9
+
+[node name="PreviewImage" type="TextureRect" parent="Root/VBoxContainer/MainCard" unique_id=1780265392]
+custom_minimum_size = Vector2(520, 923)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+
+[node name="Shine" type="TextureRect" parent="Root/VBoxContainer/MainCard/PreviewImage" unique_id=955947183]
+z_index = 97
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_27hac")
+stretch_mode = 5
+
+[node name="NameBanner" type="PanelContainer" parent="Root/VBoxContainer/MainCard/PreviewImage" unique_id=583698434]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_27hac")
+
+[node name="NameLabel" type="Label" parent="Root/VBoxContainer/MainCard/PreviewImage/NameBanner" unique_id=1325331051]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.9607843, 0.9019608, 0.78431374, 1)
+theme_override_fonts/font = ExtResource("8_lg1pb")
+theme_override_font_sizes/font_size = 36
+text = "KITCHEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Root/VBoxContainer" unique_id=1395642512]
+custom_minimum_size = Vector2(120, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_76qhd")
+
+[node name="CostRow" type="HBoxContainer" parent="Root/VBoxContainer/PanelContainer" unique_id=1949218274]
+z_index = 77
+custom_minimum_size = Vector2(97, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="CostNectarIcon" type="TextureRect" parent="Root/VBoxContainer/PanelContainer/CostRow" unique_id=849630968]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("4_svtpl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CostLabel" type="Label" parent="Root/VBoxContainer/PanelContainer/CostRow" unique_id=478658417]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.94499886, 0.89974785, 0.8694948, 1)
+theme_override_fonts/font = ExtResource("6_liehy")
+theme_override_font_sizes/font_size = 35
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActionButton" type="Button" parent="Root/VBoxContainer" unique_id=1733884663]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6npg8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lg1pb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_liehy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w1o6b")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_27hac")
+icon = ExtResource("11_w1o6b")
+icon_alignment = 1
+expand_icon = true
+
+[node name="LeftArrow" type="Button" parent="Root" unique_id=1240228441]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -419.0
+offset_top = -60.0
+offset_right = -299.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 77
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aic7r")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_i75dw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_inqbd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6n8pa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_au2n1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vi43v")
+icon = ExtResource("7_liehy")
+icon_alignment = 1
+expand_icon = true
+
+[node name="RightArrow" type="Button" parent="Root" unique_id=885192139]
+custom_minimum_size = Vector2(175, 175)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 301.0
+offset_top = -60.0
+offset_right = 421.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 77
+theme_override_styles/normal = SubResource("StyleBoxEmpty_aic7r")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_i75dw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_inqbd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_6n8pa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_au2n1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vi43v")
+icon = ExtResource("9_liehy")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SFX_BtnClick" type="AudioStreamPlayer" parent="." unique_id=67362768]
+stream = ExtResource("11_liehy")
+max_polyphony = 2
+bus = &"SFX"
+
+[node name="SFX_Denied" type="AudioStreamPlayer" parent="." unique_id=1825373721]
+stream = ExtResource("12_27hac")
+max_polyphony = 2
+bus = &"SFX"
+
+[node name="SFX_Unlock" type="AudioStreamPlayer" parent="." unique_id=265981744]
+stream = ExtResource("13_76qhd")
+max_polyphony = 2
+bus = &"SFX"
+
+[node name="Music_Skin" type="AudioStreamPlayer" parent="." unique_id=1278876326]
+stream = ExtResource("14_76qhd")
+bus = &"Music"

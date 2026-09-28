@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://bdyijamhjurkf"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_cvwvn"]
+[ext_resource type="Texture2D" uid="uid://dro2mg47xyr0" path="res://assets/sprites/fruit/watermelon.png" id="2_0y440"]
+
+[resource]
+script = ExtResource("1_cvwvn")
+tier = 10
+fruit_name = "Watermelon"
+radius = 128.0
+rot_duration = 28.0
+score_value = 350
+poison_spread_count = 5
+texture = ExtResource("2_0y440")
+face_mouth_default = 1
+face_eye_separation = 45.0
+face_pupil_scale = Vector2(1.3, 1.3)
+face_mouth_position = Vector2(0, 30)
+face_mouth_scale = Vector2(0.7, 0.8)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

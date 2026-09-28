@@ -1,0 +1,301 @@
+[gd_scene format=3 uid="uid://djnewfvd72j6o"]
+
+[ext_resource type="Script" uid="uid://dlymrhig8ge8c" path="res://scripts/DeathScreen.gd" id="1_pli0r"]
+[ext_resource type="Texture2D" uid="uid://cvlm1hj1rc8pc" path="res://assets/sprites/background/DeathScreen.png" id="2_pvmmw"]
+[ext_resource type="Texture2D" uid="uid://c3adsgeu2n7si" path="res://assets/sprites/decore/paper_crumbled.png" id="2_umeol"]
+[ext_resource type="Texture2D" uid="uid://dn3gkfohgxjl4" path="res://assets/sprites/icons/coin_icon.png" id="3_umeol"]
+[ext_resource type="FontFile" uid="uid://cw8hmlebuur1m" path="res://assets/fonts/MPLUSRounded1c-Black.ttf" id="4_eu7i2"]
+[ext_resource type="Texture2D" uid="uid://c6ih4fak537l7" path="res://assets/sprites/decore/jar_title.png" id="4_pvmmw"]
+[ext_resource type="Texture2D" uid="uid://myq6xwajvui" path="res://assets/sprites/decore/full_title.png" id="5_1nlah"]
+[ext_resource type="Texture2D" uid="uid://cafivn4sm3tha" path="res://assets/sprites/decore/pencil_line.png" id="6_1nlah"]
+[ext_resource type="Texture2D" uid="uid://dheisdxwwhqqg" path="res://assets/sprites/icons/restart_btn.png" id="6_8d2v3"]
+[ext_resource type="Texture2D" uid="uid://bt2nl74o3g0td" path="res://assets/sprites/icons/menu_btn.png" id="6_n6h62"]
+[ext_resource type="AudioStream" uid="uid://3w7ptonadttj" path="res://assets/audio/sfx/paper_crumple.ogg" id="11_f70rs"]
+[ext_resource type="AudioStream" uid="uid://ce6kw6wbf3hiu" path="res://assets/audio/sfx/paper_unfold.ogg" id="12_hq6lf"]
+[ext_resource type="AudioStream" uid="uid://dxb8rfwqo1qjx" path="res://assets/audio/sfx/fruit_drop.ogg" id="13_f70rs"]
+[ext_resource type="AudioStream" uid="uid://bquptpyhq1htc" path="res://assets/audio/sfx/pencil_draw.ogg" id="14_24m26"]
+[ext_resource type="AudioStream" uid="uid://buf2bxi0pbps0" path="res://assets/audio/sfx/score_pop.ogg" id="15_j47e8"]
+[ext_resource type="AudioStream" uid="uid://dtncobu6ukaox" path="res://assets/audio/sfx/score_count.ogg" id="16_2q43e"]
+[ext_resource type="AudioStream" uid="uid://1akgxse37sxi" path="res://assets/audio/sfx/sfx_glitter.ogg" id="17_hq6lf"]
+[ext_resource type="AudioStream" uid="uid://tn6svftgdq0c" path="res://assets/audio/sfx/btn_click.ogg" id="18_f70rs"]
+[ext_resource type="AudioStream" uid="uid://bsme1yael6clx" path="res://assets/audio/sfx/btn_appear.ogg" id="18_hq6lf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mwkx4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n6h62"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8d2v3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eu7i2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_umeol"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvmmw"]
+
+[node name="DeathScreen" type="CanvasLayer" unique_id=1503432512]
+script = ExtResource("1_pli0r")
+
+[node name="Root" type="Control" parent="." unique_id=1772585225]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PaperBall" type="TextureRect" parent="Root" unique_id=1311663172]
+z_index = 31
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_umeol")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CardPanel" type="Control" parent="Root" unique_id=615705643]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -472.5
+offset_top = -886.0
+offset_right = 472.5
+offset_bottom = 826.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PaperBg" type="TextureRect" parent="Root/CardPanel" unique_id=1302872028]
+modulate = Color(1, 1, 1, 0.89000005)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pvmmw")
+expand_mode = 1
+
+[node name="ContentContainer" type="VBoxContainer" parent="Root/CardPanel" unique_id=1470303574]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -502.0
+offset_top = -785.0
+offset_right = 502.0
+offset_bottom = 785.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="HighestFruitDisplay" type="TextureRect" parent="Root/CardPanel/ContentContainer" unique_id=2109827463]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+expand_mode = 1
+stretch_mode = 2
+
+[node name="TitleRow" type="HBoxContainer" parent="Root/CardPanel/ContentContainer" unique_id=1536956676]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="JarLabel" type="TextureRect" parent="Root/CardPanel/ContentContainer/TitleRow" unique_id=41263647]
+clip_contents = true
+custom_minimum_size = Vector2(450, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_pvmmw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FullLabel" type="TextureRect" parent="Root/CardPanel/ContentContainer/TitleRow" unique_id=1440258253]
+custom_minimum_size = Vector2(450, 300)
+layout_mode = 2
+texture = ExtResource("5_1nlah")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PencilLine1" type="TextureRect" parent="Root/CardPanel/ContentContainer" unique_id=1835515405]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+texture = ExtResource("6_1nlah")
+expand_mode = 1
+
+[node name="ScoreRow" type="HBoxContainer" parent="Root/CardPanel/ContentContainer" unique_id=159307420]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="ScoreTitle" type="Label" parent="Root/CardPanel/ContentContainer/ScoreRow" unique_id=678231594]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.36875278, 0.274787, 0.04060048, 1)
+theme_override_colors/font_outline_color = Color(0.27919537, 0.1923438, 2.4065375e-08, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_eu7i2")
+theme_override_font_sizes/font_size = 65
+text = "SCORE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Root/CardPanel/ContentContainer/ScoreRow" unique_id=2085415434]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.23137255, 0.16470589, 0.101960786, 1)
+theme_override_colors/font_outline_color = Color(0.76862746, 0.6627451, 0.47843137, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_eu7i2")
+theme_override_font_sizes/font_size = 170
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BestRow" type="HBoxContainer" parent="Root/CardPanel/ContentContainer" unique_id=1522909700]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="BestTitle" type="Label" parent="Root/CardPanel/ContentContainer/BestRow" unique_id=2110156936]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.41590565, 0.31143963, 0.050913878, 1)
+theme_override_colors/font_outline_color = Color(0.35602808, 0.24920893, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_eu7i2")
+theme_override_font_sizes/font_size = 56
+text = "BEST"
+horizontal_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="Root/CardPanel/ContentContainer/BestRow" unique_id=602757713]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.23137255, 0.16470589, 0.101960786, 1)
+theme_override_colors/font_outline_color = Color(0.76862746, 0.6627451, 0.47843137, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("4_eu7i2")
+theme_override_font_sizes/font_size = 100
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinRow" type="HBoxContainer" parent="Root/CardPanel/ContentContainer" unique_id=1472377411]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="CoinsIcon" type="TextureRect" parent="Root/CardPanel/ContentContainer/CoinRow" unique_id=1058569184]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = ExtResource("3_umeol")
+expand_mode = 1
+
+[node name="CoinsLabel" type="Label" parent="Root/CardPanel/ContentContainer/CoinRow" unique_id=2146765312]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.54509807, 0.22745098, 0.101960786, 1)
+theme_override_colors/font_outline_color = Color(0.9607843, 0.9019608, 0.78431374, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_eu7i2")
+theme_override_font_sizes/font_size = 86
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PencilLine2" type="TextureRect" parent="Root/CardPanel/ContentContainer" unique_id=221965845]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+texture = ExtResource("6_1nlah")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/CardPanel/ContentContainer" unique_id=1046382635]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="RestartButton" type="Button" parent="Root/CardPanel/ContentContainer/HBoxContainer" unique_id=508033416]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9607843, 0.9019608, 0.78431374, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mwkx4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n6h62")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8d2v3")
+icon = ExtResource("6_8d2v3")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MenuButton" type="Button" parent="Root/CardPanel/ContentContainer/HBoxContainer" unique_id=1287135049]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9607843, 0.9019608, 0.78431374, 1)
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eu7i2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_umeol")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pvmmw")
+icon = ExtResource("6_n6h62")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SFX_PaperCrumple" type="AudioStreamPlayer" parent="." unique_id=284805603]
+stream = ExtResource("11_f70rs")
+bus = &"SFX"
+
+[node name="SFX_PaperUnfold" type="AudioStreamPlayer" parent="." unique_id=2068581942]
+stream = ExtResource("12_hq6lf")
+bus = &"SFX"
+
+[node name="SFX_TitleSlide" type="AudioStreamPlayer" parent="." unique_id=320279896]
+stream = ExtResource("13_f70rs")
+volume_db = 15.0
+max_polyphony = 2
+bus = &"SFX"
+
+[node name="SFX_PencilDraw" type="AudioStreamPlayer" parent="." unique_id=1821085256]
+stream = ExtResource("14_24m26")
+max_polyphony = 2
+bus = &"SFX"
+
+[node name="SFX_ScoreCount" type="AudioStreamPlayer" parent="." unique_id=1671268336]
+stream = ExtResource("16_2q43e")
+volume_db = 10.0
+bus = &"SFX"
+
+[node name="SFX_ScorePop" type="AudioStreamPlayer" parent="." unique_id=1266857002]
+stream = ExtResource("15_j47e8")
+bus = &"SFX"
+
+[node name="SFX_CoinPop" type="AudioStreamPlayer" parent="." unique_id=73765240]
+stream = ExtResource("15_j47e8")
+bus = &"SFX"
+
+[node name="SFX_BtnAppear" type="AudioStreamPlayer" parent="." unique_id=1246526550]
+stream = ExtResource("18_hq6lf")
+max_polyphony = 2
+bus = &"SFX"
+
+[node name="SFX_Glitter" type="AudioStreamPlayer" parent="." unique_id=1016852618]
+stream = ExtResource("17_hq6lf")
+bus = &"SFX"
+
+[node name="SFX_BtnClick" type="AudioStreamPlayer" parent="." unique_id=1656439545]
+stream = ExtResource("18_f70rs")
+max_polyphony = 2
+bus = &"SFX"

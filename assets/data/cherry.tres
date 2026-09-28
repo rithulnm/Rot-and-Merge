@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FruitData" format=3 uid="uid://bboscnyonfpn0"]
+
+[ext_resource type="Script" uid="uid://dyh8xabxfrsse" path="res://scripts/FruitData.gd" id="1_v671a"]
+[ext_resource type="Texture2D" uid="uid://8nsvpugkt38s" path="res://assets/sprites/fruit/cherry.png" id="2_fhtke"]
+
+[resource]
+script = ExtResource("1_v671a")
+fruit_name = "Cherry"
+radius = 32.0
+rot_duration = 60.0
+texture = ExtResource("2_fhtke")
+face_mouth_default = 1
+face_personality = 3
+face_eye_scale = Vector2(0.4, 0.4)
+face_pupil_scale = Vector2(0.35, 0.35)
+face_mouth_position = Vector2(0, 5.5)
+face_mouth_scale = Vector2(0.4, 0.4)
+metadata/_custom_type_script = "uid://dyh8xabxfrsse"

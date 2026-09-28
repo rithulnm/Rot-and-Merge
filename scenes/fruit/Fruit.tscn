@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://cm10y2snpcs7u"]
+
+[ext_resource type="Script" uid="uid://bf6n1xeppipnj" path="res://scripts/Fruit.gd" id="1_s8d7i"]
+[ext_resource type="Shader" uid="uid://djtulyj2yivur" path="res://shaders/normal_map.gdshader" id="2_juheo"]
+[ext_resource type="Texture2D" uid="uid://hcw6xqfj3h3f" path="res://assets/sprites/fruit/cherry_normal.png" id="3_jactp"]
+[ext_resource type="Script" uid="uid://c1g13ukg7wgou" path="res://scripts/Face.gd" id="3_ly465"]
+[ext_resource type="Texture2D" uid="uid://c3c6hy2uv430f" path="res://assets/sprites/fruit/strawberry.png" id="4_ly465"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ly465"]
+friction = 4.8
+rough = true
+bounce = 0.09
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ly465"]
+shader = ExtResource("2_juheo")
+shader_parameter/normal_map_tex = ExtResource("3_jactp")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8d7i"]
+radius = 57.035076
+
+[sub_resource type="Gradient" id="Gradient_ly465"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jactp"]
+gradient = SubResource("Gradient_ly465")
+fill = 1
+fill_from = Vector2(0.50427353, 0.4871795)
+fill_to = Vector2(0.8632479, 0.20683761)
+
+[node name="Fruit" type="RigidBody2D" unique_id=1940131491]
+z_index = 100
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_ly465")
+gravity_scale = 0.8
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 4
+linear_damp = 0.2
+angular_damp = 0.4
+script = ExtResource("1_s8d7i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=873976678]
+material = SubResource("ShaderMaterial_ly465")
+texture = ExtResource("4_ly465")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2049984096]
+shape = SubResource("CircleShape2D_s8d7i")
+
+[node name="RotTimer" type="Timer" parent="." unique_id=545620658]
+wait_time = 20.0
+one_shot = true
+
+[node name="Face" type="Node2D" parent="." unique_id=552007399]
+z_index = 1
+script = ExtResource("3_ly465")
+
+[node name="LeftEye" type="Node2D" parent="Face" unique_id=326253816]
+z_index = 1
+position = Vector2(-20, -10)
+
+[node name="EyeWhite" type="Sprite2D" parent="Face/LeftEye" unique_id=1835049185]
+z_index = 1
+
+[node name="Pupil" type="Sprite2D" parent="Face/LeftEye" unique_id=364126391]
+z_index = 1
+scale = Vector2(0.5, 0.5)
+
+[node name="RightEye" type="Node2D" parent="Face" unique_id=1184616664]
+z_index = 1
+position = Vector2(20, -10)
+
+[node name="EyeWhite" type="Sprite2D" parent="Face/RightEye" unique_id=414559856]
+z_index = 1
+
+[node name="Pupil" type="Sprite2D" parent="Face/RightEye" unique_id=118361845]
+z_index = 1
+scale = Vector2(0.5, 0.5)
+
+[node name="Mouth" type="Sprite2D" parent="Face" unique_id=649957571]
+z_index = 1
+position = Vector2(0, 15)
+scale = Vector2(0.5, 0.5)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=708117663]
+position = Vector2(5.5000067, -40.5)
+scale = Vector2(5.2031255, 5.6718745)
+color = Color(1, 0.95468724, 0.7977378, 1)
+texture = SubResource("GradientTexture2D_jactp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="RotTimer" to="." method="_on_rot_timer_timeout"]

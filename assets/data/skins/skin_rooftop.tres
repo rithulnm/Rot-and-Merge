@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkinData" format=3 uid="uid://f3yrdkybn5hg"]
+
+[ext_resource type="Script" uid="uid://cy7dsomjqck4d" path="res://scripts/SkinData.gd" id="2_k0273"]
+[ext_resource type="Texture2D" uid="uid://dcn7hsmnrf0lo" path="res://assets/sprites/background/Tea_House.png" id="2_ric1q"]
+[ext_resource type="Texture2D" uid="uid://cujy2ryiroyc6" path="res://assets/sprites/background/Tea_Shelf.png" id="3_n5fnu"]
+[ext_resource type="Texture2D" uid="uid://b1tje65yryytx" path="res://assets/sprites/preview/Preview2.png" id="4_ric1q"]
+
+[resource]
+script = ExtResource("2_k0273")
+skin_name = "Tea House"
+key_cost = 3
+far_texture = ExtResource("2_ric1q")
+mid_texture = ExtResource("3_n5fnu")
+preview_texture = ExtResource("4_ric1q")
+metadata/_custom_type_script = "uid://cy7dsomjqck4d"
